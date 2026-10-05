@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>لوحة التفعيل | وظيفتك الجاية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#151a2e;--mut:#5c6482;--p:#2b3a8f;--o:#f28c28;--line:#e0e3ef}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1020;--card:#161b33;--ink:#eceefb;--mut:#a3aad0;--p:#8a9cff;--line:#272d52}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 Cairo,sans-serif}
+.w{max-width:760px;margin:auto;padding:20px 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+input{width:100%;padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font:inherit;margin:6px 0 10px}
+.btn{background:var(--p);color:#fff;border:0;border-radius:10px;padding:9px 18px;font:600 15px Cairo;cursor:pointer}
+.btn.or{background:var(--o);color:#1a1a1a}.m{color:var(--mut);font-size:14px}.err{color:#d64545}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+</style>
+</head>
+<body><div class="w">
+<h1>لوحة التفعيل</h1>
+<div class="card" id="lg"><label for="tk">كلمة سر الأدمن</label><input id="tk" type="password" autocomplete="current-password"><button class="btn" id="in">دخول</button> <span class="err" id="e"></span></div>
+<div id="box" hidden><p class="m">الطلبات المعلقة — اتأكد من وصول الفلوس قبل ما تضغط "فعّل".</p><div id="ls"></div><button class="btn" id="rf">تحديث</button></div>
+</div>
+<script>
+const API='https://YOUR-WORKER.workers.dev'; // نفس رابط الـWorker
+const SITE='https://wazifetak.example/#access'; // رابط الموقع بعد الدومين
+const PN={sayyad:'أساسي',pro:'متقدم',vip:'بلا حدود'};
+const $=i=>document.getElementById(i);
+const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const tok=()=>sessionStorage.getItem('wg_admin')||'';
+async function call(p,body){const r=await fetch(API+p,{method:body?'POST':'GET',headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok()},body:body?JSON.stringify(body):undefined});
+ const d=await r.json();if(!r.ok)throw new Error(d.error||'خطأ');return d}
+function wa(phone){let d=String(phone).replace(/\D/g,'');if(d.startsWith('00'))d=d.slice(2);else if(d.startsWith('0'))d='20'+d.slice(1);return d}
+async function load(){
+ try{const o=(await call('/admin/orders')).sort((a,b)=>b.t-a.t);
+  $('lg').hidden=true;$('box').hidden=false;
+  $('ls').innerHTML=o.map(x=>`<div class="card row"><div><b>${esc(x.name)}</b> — باقة ${PN[x.plan]||esc(x.plan)}<br><span class="m" dir="ltr">${esc(x.phone)}</span> · <span class="m">طلب ${esc(x.id)} · ${new Date(x.t).toLocaleString('ar-EG')}</span></div><button class="btn or" data-id="${esc(x.id)}">فعّل</button></div>`).join('')||'<div class="card m">مفيش طلبات معلقة.</div>';
+ }catch(e){$('e').textContent=e.message;sessionStorage.removeItem('wg_admin');$('lg').hidden=false;$('box').hidden=true}}
+$('in').onclick=()=>{sessionStorage.setItem('wg_admin',$('tk').value);$('e').textContent='';load()};
+$('rf').onclick=load;
+$('ls').onclick=async e=>{const b=e.target.closest('button[data-id]');if(!b)return;b.disabled=true;
+ try{const d=await call('/admin/activate',{id:b.dataset.id});
+  const msg=`أهلاً، تم تأكيد الدفع ✅\nكود دخولك على وظيفتك الجاية:\n${d.code}\nادخل من هنا واكتب الكود: ${SITE}\nالكود صالح 30 يوم.`;
+  window.open(`https://wa.me/${wa(d.phone)}?text=${encodeURIComponent(msg)}`,'_blank');load()
+ }catch(x){alert(x.message);b.disabled=false}};
+if(tok())load();
+</script>
+</body></html>
