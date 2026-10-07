@@ -21,9 +21,9 @@
 {"@type":"Organization","@id":"https://wazifetak.github.io/#org","name":"وظيفتك الجاية","alternateName":"Wazifetak El-Gaya","url":"https://wazifetak.github.io/","logo":"https://wazifetak.github.io/logo.svg","areaServed":["EG","SA","AE","KW","QA","BH"],"availableLanguage":"ar"},
 {"@type":"WebSite","name":"وظيفتك الجاية","url":"https://wazifetak.github.io/","inLanguage":"ar","publisher":{"@id":"https://wazifetak.github.io/#org"}},
 {"@type":"Service","name":"البحث عن وظائف في مصر والخليج","serviceType":"Job search and application platform","provider":{"@id":"https://wazifetak.github.io/#org"},"areaServed":["EG","SA","AE","KW","QA","BH"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"باقات وظيفتك الجاية","itemListElement":[
-{"@type":"Offer","name":"أساسي - 10 وظائف شهرياً","price":"349","priceCurrency":"EGP"},
-{"@type":"Offer","name":"متقدم - 25 وظيفة شهرياً","price":"599","priceCurrency":"EGP"},
-{"@type":"Offer","name":"بلا حدود - بحث مفتوح","price":"999","priceCurrency":"EGP"}]}},
+{"@type":"Offer","name":"أساسي - 10 عمليات بحث شهرياً","price":"349","priceCurrency":"EGP"},
+{"@type":"Offer","name":"متقدم - 30 عملية بحث شهرياً","price":"599","priceCurrency":"EGP"},
+{"@type":"Offer","name":"بلا حدود - 100 عملية بحث شهرياً","price":"999","priceCurrency":"EGP"}]}},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"الوظايف حقيقية؟","acceptedAnswer":{"@type":"Answer","text":"أيوه، الوظايف بتتجمع من مواقع التوظيف وقت البحث، وكل وظيفة ليها رابط التقديم الأصلي."}},
 {"@type":"Question","name":"إزاي أدفع؟","acceptedAnswer":{"@type":"Answer","text":"بالتحويل على فودافون كاش أو إنستاباي على الرقم 01068204700، وبعدها تبعت الإيصال على واتساب وتستلم كود الدخول."}},
@@ -136,7 +136,7 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <div class="jr"><div><b>محاسب تكاليف</b><span>شركة نموذجية · جدة</span></div><u>قدّم ←</u></div>
 <div class="jr"><div><b>مساعد محاسب</b><span>شركة نموذجية · الدمام</span></div><u>قدّم ←</u></div>
 <div class="sm">مثال توضيحي لشكل النتائج</div></div>
-<div class="st"><span>الحصة المتبقية</span><b>25 وظيفة</b></div>
+<div class="st"><span>الحصة المتبقية</span><b>27 عملية بحث</b></div>
 </div></div></section>
 
 <div class="tr"><div class="w tg">
@@ -151,7 +151,7 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <div class="ft">
 <div class="fc big rv"><div><div class="ic">⌕</div><h3>بحث بالوظيفة والدولة</h3><p>اكتب المسمى الوظيفي واختار الدولة، والنتايج بتتجمع من مواقع التوظيف وقت البحث.</p></div><a class="btn" style="background:#fff;color:var(--ink);border-color:#fff;align-self:flex-start" href="#plans">شوف الباقات</a></div>
 <div class="fc rv"><div class="ic">↗</div><h3>تقديم على الصفحة الأصلية</h3><p>كل وظيفة معاها رابط التقديم الأصلي، من غير وسيط.</p></div>
-<div class="fc rv"><div class="ic">≡</div><h3>حصة واضحة</h3><p>عارف من الأول كام وظيفة هتظهرلك في الشهر.</p></div>
+<div class="fc rv"><div class="ic">≡</div><h3>حصة واضحة</h3><p>عارف من الأول كام عملية بحث معاك في الشهر.</p></div>
 <div class="fc rv"><div class="ic">✓</div><h3>دفع من غير تعقيد</h3><p>تحويل على فودافون كاش أو إنستاباي وكود دخول بعد التأكيد.</p></div>
 <div class="fc rv"><div class="ic">◷</div><h3>اشتراك 30 يوم</h3><p>مفيش تجديد تلقائي، بتجدد وقت ما تحب.</p></div>
 </div></div></section>
@@ -169,7 +169,7 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 </div></section>
 
 <section id="plans"><div class="w">
-<div class="eb">الباقات</div><h2 class="rv">اختار الباقة المناسبة</h2><p class="sub">الاشتراك 30 يوم. الحصة هي عدد الوظايف اللي بتظهرلك في الشهر.</p>
+<div class="eb">الباقات</div><h2 class="rv">اختار الباقة المناسبة</h2><p class="sub">الاشتراك 30 يوم. الحصة هي عدد عمليات البحث في الشهر، وكل بحث بيعرض لحد 10 وظايف.</p>
 <div class="pls" id="pl"></div></div></section>
 
 <section id="order" style="padding-top:20px"><div class="w of">
@@ -219,7 +219,7 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <script>
 const API='https://wazifetak-api.wazifetak.workers.dev';
 const WA='201068204700';
-const PL={sayyad:['أساسي',349,'10 وظايف في الشهر'],pro:['متقدم',599,'25 وظيفة في الشهر'],vip:['بلا حدود',999,'بحث مفتوح (حد أقصى 500)']};
+const PL={sayyad:['أساسي',349,'10 عمليات بحث في الشهر'],pro:['متقدم',599,'30 عملية بحث في الشهر'],vip:['بلا حدود',999,'100 عملية بحث في الشهر']};
 const $=i=>document.getElementById(i);
 const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 let plan='pro';
@@ -234,13 +234,14 @@ $('go').onclick=async()=>{$('e1').textContent='';
   const msg=encodeURIComponent(`طلب رقم ${d.id} — باقة ${PL[plan][0]} (${d.plan.price} ج) على وظيفتك الجاية. هبعت إيصال التحويل.`);
   $('after').className='';$('after').innerHTML=`<p><b>رقم طلبك: ${esc(d.id)}</b><br>حوّل <b>${d.plan.price} ج</b> على <b dir="ltr">01068204700</b> (فودافون كاش أو إنستاباي)، وابعت الإيصال على واتساب، وهيوصلك كود الدخول بعد التأكيد.</p><a class="btn or" href="https://wa.me/${WA}?text=${msg}">ابعت الإيصال على واتساب</a>`;
  }catch(e){$('e1').textContent=e.message}};
-async function enter(){try{const d=await api('/me');$('srch').className='card';$('srch').style.marginTop='14px';$('me').textContent=`أهلاً ${d.name} — متبقي ${d.left} وظيفة`}catch(e){localStorage.removeItem('wg_code');$('e2').textContent=e.message}}
+async function enter(){try{const d=await api('/me');$('srch').className='card';$('srch').style.marginTop='14px';$('me').textContent=`أهلاً ${d.name} — متبقي ${d.left} عملية بحث`}catch(e){localStorage.removeItem('wg_code');$('e2').textContent=e.message}}
 $('login').onclick=()=>{$('e2').textContent='';localStorage.setItem('wg_code',$('code').value.trim());enter()};
 if(localStorage.getItem('wg_code'))enter();
-$('s').onclick=async()=>{$('e3').textContent='';
+$('s').onclick=async()=>{$('e3').textContent='';const b=$('s');b.disabled=true;b.textContent='جاري البحث...';$('res').innerHTML='<p class="m">بنجمّع الوظايف من مواقع التوظيف، ممكن ياخد حتى 15 ثانية...</p>';
  try{const d=await api('/search?'+new URLSearchParams({q:$('q').value,country:$('c').value}));
-  $('res').innerHTML=d.jobs.map(j=>`<div class="card job"><b>${esc(j.title)}</b><span class="m">${esc(j.company)} · ${esc(j.city)} ${esc(j.country)}</span><br><a class="btn" style="margin-top:8px" target="_blank" rel="noopener" href="${esc(j.link)}">قدّم الآن</a></div>`).join('')||'<p class="m">مفيش نتايج، جرّب كلمة تانية.</p>';
-  $('me').textContent=`متبقي ${d.left} وظيفة`}catch(e){$('e3').textContent=e.message}};
+  $('res').innerHTML=d.jobs.map(j=>`<div class="card job"><b>${esc(j.title)}</b><span class="m">${[j.company,j.city,j.country].filter(Boolean).map(esc).join(' · ')}</span><br><a class="btn" style="margin-top:8px" target="_blank" rel="noopener" href="${esc(j.link)}">قدّم الآن</a></div>`).join('')||'<p class="m">مفيش نتايج، جرّب كلمة تانية. ومبتتخصمش من حصتك.</p>';
+  $('me').textContent=`متبقي ${d.left} عملية بحث`}catch(e){$('res').innerHTML='';$('e3').textContent=e.message}
+ b.disabled=false;b.textContent='ابحث'};
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 </body></html>
