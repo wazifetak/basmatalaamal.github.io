@@ -26,7 +26,7 @@ input{width:100%;padding:10px;border:1px solid var(--line);border-radius:9px;bac
 <script>
 const API='https://wazifetak-api.wazifetak.workers.dev'; // نفس رابط الـWorker
 const SITE='https://wazifetak.github.io/#access'; // رابط الموقع بعد الدومين
-const PN={sayyad:'أساسي',pro:'متقدم',vip:'بلا حدود'};
+const PN={sayyad:'أساسي',pro:'متقدم',vip:'بلا حدود',full:'المسار الكامل'};
 const $=i=>document.getElementById(i);
 const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 const tok=()=>sessionStorage.getItem('wg_admin')||'';
@@ -42,7 +42,7 @@ $('in').onclick=()=>{sessionStorage.setItem('wg_admin',$('tk').value);$('e').tex
 $('rf').onclick=load;
 $('ls').onclick=async e=>{const b=e.target.closest('button[data-id]');if(!b)return;b.disabled=true;
  try{const d=await call('/admin/activate',{id:b.dataset.id});
-  const msg=`أهلاً، تم تأكيد الدفع ✅\nكود دخولك على وظيفتك الجاية:\n${d.code}\nادخل من هنا واكتب الكود: ${SITE}\nالكود صالح 30 يوم.`;
+  const msg=`أهلاً، تم تأكيد الدفع ✅\nكود دخولك على وظيفتك الجاية:\n${d.code}\nادخل من هنا واكتب الكود: ${SITE}\nالكود صالح 30 يوم.${d.plan==='full'?'\nوابعتلي بياناتك وسيرتك القديمة علشان نجهّز سيرتك وخطاب التقديم.':''}`;
   window.open(`https://wa.me/${wa(d.phone)}?text=${encodeURIComponent(msg)}`,'_blank');load()
  }catch(x){alert(x.message);b.disabled=false}};
 if(tok())load();
