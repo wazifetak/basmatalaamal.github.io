@@ -23,11 +23,13 @@
 {"@type":"Service","name":"البحث عن وظائف في مصر والخليج","serviceType":"Job search and application platform","provider":{"@id":"https://wazifetak.github.io/#org"},"areaServed":["EG","SA","AE","KW","QA","BH"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"باقات وظيفتك الجاية","itemListElement":[
 {"@type":"Offer","name":"أساسي - 10 عمليات بحث شهرياً","price":"349","priceCurrency":"EGP"},
 {"@type":"Offer","name":"متقدم - 30 عملية بحث شهرياً","price":"599","priceCurrency":"EGP"},
-{"@type":"Offer","name":"بلا حدود - 100 عملية بحث شهرياً","price":"999","priceCurrency":"EGP"}]}},
+{"@type":"Offer","name":"بلا حدود - 100 عملية بحث شهرياً","price":"999","priceCurrency":"EGP"},
+{"@type":"Offer","name":"المسار الكامل - بحث وسيرة ذاتية وخطاب تقديم","price":"899","priceCurrency":"EGP"}]}},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"الوظايف حقيقية؟","acceptedAnswer":{"@type":"Answer","text":"أيوه، الوظايف بتتجمع من مواقع التوظيف وقت البحث، وكل وظيفة ليها رابط التقديم الأصلي."}},
 {"@type":"Question","name":"إزاي أدفع؟","acceptedAnswer":{"@type":"Answer","text":"بالتحويل على فودافون كاش أو إنستاباي على الرقم 01068204700، وبعدها تبعت الإيصال على واتساب وتستلم كود الدخول."}},
 {"@type":"Question","name":"فيه ضمان وظيفة؟","acceptedAnswer":{"@type":"Answer","text":"لا. وظيفتك الجاية أداة بحث وتقديم ولا تضمن وظيفة أو مقابلة."}},
+{"@type":"Question","name":"فيه ضمان استرداد؟","acceptedAnswer":{"@type":"Answer","text":"أيوه، ضمان استرداد خلال 7 أيام من تأكيد الدفع على جميع الخدمات بشروط واضحة، والضمان على جودة الخدمة وليس على الحصول على وظيفة."}},
 {"@type":"Question","name":"الاشتراك لمدة قد إيه؟","acceptedAnswer":{"@type":"Answer","text":"30 يوم من تفعيل الكود."}}]}]}</script>
 <style>
 :root{color-scheme:light;--ink:#14161f;--ink2:#444b5e;--mut:#7a8095;--bg:#f6f5f1;--sf:#fff;--ln:#e6e4dc;--ac:#2b3a8f;--ac2:#1f2b6e;--ok:#1f8a5b;--r1:8px;--r2:12px;--r3:18px;--sh1:0 1px 2px rgba(20,22,31,.06);--sh2:0 14px 34px -14px rgba(20,22,31,.22);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
@@ -75,7 +77,7 @@ h1{font-size:clamp(30px,4.6vw,48px);line-height:1.3}h1 span{color:var(--ac)}
 .pay{margin-top:40px;background:var(--ink);color:#fff;border-radius:var(--r3);padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .pay p{margin:0;color:#c3c7d4;font-size:14.5px}.pay b{display:block;font-size:34px;letter-spacing:1.5px;direction:ltr;text-align:right;line-height:1.4}
 .pay .btn{background:#fff;color:var(--ink);border-color:#fff}.pay .m{color:#9fe0c0}
-.pls{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;align-items:stretch}
+.pls{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:36px;align-items:stretch}
 .pc{position:relative;background:var(--sf);border:1.5px solid var(--ln);border-radius:var(--r3);padding:30px 26px;display:flex;flex-direction:column;cursor:pointer;transition:box-shadow .2s,border-color .2s}
 .pc:hover{box-shadow:var(--sh2)}.pc.sel{border-color:var(--ac);box-shadow:var(--sh2)}
 .bd{position:absolute;top:-12px;inset-inline-start:24px;background:var(--ac);color:#fff;font-size:12px;font-weight:600;padding:2px 12px;border-radius:6px}
@@ -84,8 +86,8 @@ h1{font-size:clamp(30px,4.6vw,48px);line-height:1.3}h1 span{color:var(--ac)}
 .of{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
 .card{background:var(--sf);border:1px solid var(--ln);border-radius:var(--r3);padding:26px}
 label{display:block;font-size:13.5px;font-weight:600;color:var(--ink2);margin:14px 0 6px}label:first-child{margin-top:0}
-input,select{width:100%;padding:12px 14px;border:1.5px solid var(--ln);border-radius:var(--r1);background:#fff;color:var(--ink);font:400 15px Cairo,sans-serif;transition:border-color .15s,box-shadow .15s}
-input:focus,select:focus{outline:0;border-color:var(--ac);box-shadow:0 0 0 3px #2b3a8f22}
+input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid var(--ln);border-radius:var(--r1);background:#fff;color:var(--ink);font:400 15px Cairo,sans-serif;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--ac);box-shadow:0 0 0 3px #2b3a8f22}
 .err{color:#c23b3b;font-size:14px;min-height:22px;margin:8px 0 0}.m{color:var(--mut);font-size:14px}.hide{display:none}
 #after{margin-top:6px;padding:16px;background:#f1f6f3;border:1px solid #cfe5d8;border-radius:var(--r2)}#after p{margin:0 0 12px}
 .job{margin-top:12px;padding:16px}.job b{display:block}
@@ -100,6 +102,9 @@ footer{background:var(--ink);color:#c3c7d4;padding:52px 0 28px;margin-top:72px;f
 .fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}.fg h4{margin:0 0 10px;color:#fff;font-size:15px}.fg a{display:block;text-decoration:none;padding:3px 0}.fg a:hover{color:#fff}
 .fg .logo{color:#fff;margin-bottom:10px}.fg .logo i{color:#aab4f0}.cr{margin-top:34px;padding-top:20px;border-top:1px solid #2a2e3d;font-size:13px}
 .bar{display:none}
+textarea{resize:vertical;min-height:170px;line-height:1.7}
+.sc{font-size:44px;font-weight:800;line-height:1.2}.pg{height:10px;background:var(--ln);border-radius:6px;overflow:hidden;margin:8px 0 18px}.pg i{display:block;height:100%;background:var(--ac)}
+.kw span{display:inline-block;margin:3px;padding:2px 10px;border-radius:6px;font-size:13.5px;direction:ltr}.kw.ok span{background:#e3f3ea;color:#17613f}.kw.no span{background:#fbe9e9;color:#a02b2b}
 .js .rv{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}.js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
 @media(max-width:860px){
@@ -118,7 +123,7 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="lg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#2b3a8f"/><path d="M16 44l12-12 8 8 14-16" stroke="#f28c28" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 24h10v10" stroke="#f28c28" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
 <header><div class="w"><nav>
 <a class="logo" href="/" aria-label="وظيفتك الجاية"><svg><use href="#lg"/></svg><span>وظيفتك <i>الجاية</i></span></a>
-<div class="nv"><a href="#how">الخطوات</a><a href="#plans">الباقات</a><a href="#about">من نحن</a><a href="#faq">الأسئلة</a></div>
+<div class="nv"><a href="#how">الخطوات</a><a href="#plans">الباقات</a><a href="#compare">قارن سيرتك</a><a href="#about">من نحن</a><a href="#faq">الأسئلة</a></div>
 <a class="btn" href="#order">اطلب الخدمة</a></nav></div></header>
 <main>
 <section class="hero"><div class="w hg">
@@ -172,6 +177,12 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <div class="eb">الباقات</div><h2 class="rv">اختار الباقة المناسبة</h2><p class="sub">الاشتراك 30 يوم. الحصة هي عدد عمليات البحث في الشهر، وكل بحث بيعرض لحد 10 وظايف.</p>
 <div class="pls" id="pl"></div></div></section>
 
+<section id="guarantee" style="padding-top:20px"><div class="w">
+<div class="eb">الضمان</div><h2>ضمان استرداد على كل الخدمات</h2><p class="sub">لو الخدمة ما ناسبتكش، فلوسك ترجع. الشروط واضحة من الأول.</p>
+<div class="cp"><div class="card y"><h3>اللي بيغطيه الضمان</h3><ul><li>الاسترداد خلال 7 أيام من تأكيد الدفع</li><li>البحث: استرداد كامل لو استخدمت 5 عمليات بحث أو أقل</li><li>السيرة الذاتية: تعديل مجاني مرة واحدة، ولو لسه مش راضي بنرجّع المبلغ</li><li>الاسترداد بنفس طريقة الدفع</li></ul></div>
+<div class="card n"><h3>اللي مش بيغطيه</h3><ul><li>الحصول على وظيفة أو مقابلة</li><li>الطلبات بعد 7 أيام من الدفع</li><li>الاستخدام الكامل لحصة البحث</li></ul><p class="m" style="margin-top:12px">لطلب الاسترداد ابعت رقم طلبك على واتساب <span dir="ltr">01068204700</span>.</p></div></div>
+</div></section>
+
 <section id="order" style="padding-top:20px"><div class="w of">
 <div><div class="eb">اطلب الخدمة</div><h2>سجّل طلبك وكمّل على واتساب</h2><p class="sub">اكتب بياناتك، وهيطلعلك رقم الطلب وطريقة التحويل. بعد تأكيد الدفع بنبعتلك كود الدخول.</p>
 <ul class="ck"><li>رقم طلب فوري</li><li>تحويل على فودافون كاش أو إنستاباي</li><li>كود الدخول بعد تأكيد التحويل</li></ul></div>
@@ -193,6 +204,14 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <p style="margin:16px 0 0"><button class="btn or" id="s">ابحث</button></p><p class="err" id="e3"></p><div id="res"></div></div>
 </div></section>
 
+<section id="compare" style="background:var(--sf);border-block:1px solid var(--ln)"><div class="w">
+<div class="eb">أداة مجانية</div><h2>قارن سيرتك بالوظيفة</h2><p class="sub">الصق نص سيرتك ونص إعلان الوظيفة، وهتعرف نسبة التوافق والكلمات الناقصة. التحليل بيتم على جهازك، وسيرتك مش بتتبعت لأي مكان.</p>
+<div class="cp"><div class="card"><label for="cvt">نص سيرتك الذاتية</label><textarea id="cvt" placeholder="الصق سيرتك هنا"></textarea></div>
+<div class="card"><label for="jbt">نص إعلان الوظيفة</label><textarea id="jbt" placeholder="الصق وصف الوظيفة هنا، أو اضغط قارن مع سيرتي من نتايج البحث"></textarea></div></div>
+<p style="margin:18px 0 0"><button class="btn lg" id="cmpgo">حلّل التوافق</button></p>
+<div id="cmpres" style="margin-top:18px"></div>
+</div></section>
+
 <section id="about" style="background:var(--sf);border-block:1px solid var(--ln)"><div class="w">
 <div class="eb">من نحن</div><h2>أداة بحث وتقديم، بشفافية كاملة</h2>
 <p class="sub" style="max-width:720px">وظيفتك الجاية منصة عربية للبحث عن الوظائف، هدفها توفير وقت الباحث عن عمل بتجميع فرص حقيقية من مواقع التوظيف في مكان واحد، مع رابط التقديم المباشر لكل وظيفة. المنصة من فريق <a href="https://cvproservice.github.io/cvpro/" style="color:var(--ac)">CV Pro Egypt</a> المتخصص في كتابة السير الذاتية لسوق العمل في مصر والخليج.</p>
@@ -203,6 +222,7 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <section id="faq"><div class="w"><div class="eb">أسئلة</div><h2>أسئلة شائعة</h2><div style="margin-top:26px;max-width:760px">
 <details><summary>الوظايف حقيقية؟</summary><p>أيوه، بتتجمع من مواقع التوظيف وقت البحث، وكل وظيفة ليها رابط التقديم الأصلي.</p></details>
 <details><summary>إزاي أدفع؟</summary><p>بالتحويل على فودافون كاش أو إنستاباي على الرقم 01068204700، وبعدها تبعت الإيصال على واتساب وتستلم كود الدخول.</p></details>
+<details><summary>فيه ضمان استرداد؟</summary><p>أيوه، خلال 7 أيام من تأكيد الدفع على جميع الخدمات. التفاصيل في قسم الضمان، والضمان على جودة الخدمة مش على الحصول على وظيفة.</p></details>
 <details><summary>فيه ضمان وظيفة؟</summary><p>لا. وظيفتك الجاية أداة بحث وتقديم ولا تضمن وظيفة أو مقابلة.</p></details>
 <details><summary>الاشتراك لمدة قد إيه؟</summary><p>30 يوم من تفعيل الكود.</p></details>
 <details><summary>لو الحصة خلصت؟</summary><p>تقدر ترقّي باقتك أو تجدد الاشتراك من واتساب.</p></details>
@@ -219,11 +239,11 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <script>
 const API='https://wazifetak-api.wazifetak.workers.dev';
 const WA='201068204700';
-const PL={sayyad:['أساسي',349,'10 عمليات بحث في الشهر'],pro:['متقدم',599,'30 عملية بحث في الشهر'],vip:['بلا حدود',999,'100 عملية بحث في الشهر']};
+const PL={sayyad:['أساسي',349,'10 عمليات بحث في الشهر',['رابط التقديم المباشر','كل الدول الست','ضمان استرداد 7 أيام']],pro:['متقدم',599,'30 عملية بحث في الشهر',['رابط التقديم المباشر','كل الدول الست','ضمان استرداد 7 أيام']],vip:['بلا حدود',999,'100 عملية بحث في الشهر',['رابط التقديم المباشر','كل الدول الست','ضمان استرداد 7 أيام']],full:['المسار الكامل',899,'30 عملية بحث في الشهر',['سيرة ذاتية ATS عربي وإنجليزي','خطاب تقديم احترافي','مقارنة سيرتك بالوظايف','ضمان استرداد 7 أيام']]};
 const $=i=>document.getElementById(i);
 const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
-let plan='pro';
-function drawPlans(){$('pl').innerHTML=Object.entries(PL).map(([k,v])=>`<div class="pc${k==plan?' sel':''}" data-k="${k}">${k=='pro'?'<span class="bd">الأكثر طلباً</span>':''}<h3>${v[0]}</h3><div class="pr"><b>${v[1]}</b> ج / شهر</div><ul><li>${v[2]}</li><li>رابط التقديم المباشر</li><li>كل الدول الست</li></ul><button class="btn ${k==plan?'':'ol'} wide" data-k="${k}">${k==plan?'✔ مختارة':'اختار الباقة'}</button></div>`).join('')}
+let plan='full';
+function drawPlans(){$('pl').innerHTML=Object.entries(PL).map(([k,v])=>`<div class="pc${k==plan?' sel':''}" data-k="${k}">${k=='full'?'<span class="bd">الأكثر شمولاً</span>':''}<h3>${v[0]}</h3><div class="pr"><b>${v[1]}</b> ج / شهر</div><ul>${[v[2],...v[3]].map(t=>'<li>'+t+'</li>').join('')}</ul><button class="btn ${k==plan?'':'ol'} wide" data-k="${k}">${k==plan?'✔ مختارة':'اختار الباقة'}</button></div>`).join('')}
 drawPlans();$('pl').onclick=e=>{const p=e.target.closest('[data-k]');if(p){plan=p.dataset.k;drawPlans();if(e.target.closest('button'))location.hash='order'}};
 $('cp').onclick=async()=>{try{await navigator.clipboard.writeText('01068204700');$('cm').textContent='✔ اتنسخ'}catch(e){$('cm').textContent='انسخه يدوياً'}};
 async function api(path,opt={}){const c=localStorage.getItem('wg_code');
@@ -232,16 +252,39 @@ async function api(path,opt={}){const c=localStorage.getItem('wg_code');
 $('go').onclick=async()=>{$('e1').textContent='';
  try{const d=await api('/order',{method:'POST',body:JSON.stringify({name:$('nm').value,phone:$('ph').value,plan})});
   const msg=encodeURIComponent(`طلب رقم ${d.id} — باقة ${PL[plan][0]} (${d.plan.price} ج) على وظيفتك الجاية. هبعت إيصال التحويل.`);
-  $('after').className='';$('after').innerHTML=`<p><b>رقم طلبك: ${esc(d.id)}</b><br>حوّل <b>${d.plan.price} ج</b> على <b dir="ltr">01068204700</b> (فودافون كاش أو إنستاباي)، وابعت الإيصال على واتساب، وهيوصلك كود الدخول بعد التأكيد.</p><a class="btn or" href="https://wa.me/${WA}?text=${msg}">ابعت الإيصال على واتساب</a>`;
+  $('after').className='';$('after').innerHTML=`<p><b>رقم طلبك: ${esc(d.id)}</b><br>حوّل <b>${d.plan.price} ج</b> على <b dir="ltr">01068204700</b> (فودافون كاش أو إنستاباي)، وابعت الإيصال على واتساب، وهيوصلك كود الدخول بعد التأكيد.${plan=='full'?'<br>وبعد التأكيد هنتواصل معاك على واتساب لاستلام بيانات سيرتك وتجهيزها.':''}</p><a class="btn or" href="https://wa.me/${WA}?text=${msg}">ابعت الإيصال على واتساب</a>`;
  }catch(e){$('e1').textContent=e.message}};
 async function enter(){try{const d=await api('/me');$('srch').className='card';$('srch').style.marginTop='14px';$('me').textContent=`أهلاً ${d.name} — متبقي ${d.left} عملية بحث`}catch(e){localStorage.removeItem('wg_code');$('e2').textContent=e.message}}
 $('login').onclick=()=>{$('e2').textContent='';localStorage.setItem('wg_code',$('code').value.trim());enter()};
 if(localStorage.getItem('wg_code'))enter();
 $('s').onclick=async()=>{$('e3').textContent='';const b=$('s');b.disabled=true;b.textContent='جاري البحث...';$('res').innerHTML='<p class="m">بنجمّع الوظايف من مواقع التوظيف، ممكن ياخد حتى 15 ثانية...</p>';
  try{const d=await api('/search?'+new URLSearchParams({q:$('q').value,country:$('c').value}));
-  $('res').innerHTML=d.jobs.map(j=>`<div class="card job"><b>${esc(j.title)}</b><span class="m">${[j.company,j.city,j.country].filter(Boolean).map(esc).join(' · ')}</span><br><a class="btn" style="margin-top:8px" target="_blank" rel="noopener" href="${esc(j.link)}">قدّم الآن</a></div>`).join('')||'<p class="m">مفيش نتايج، جرّب كلمة تانية. ومبتتخصمش من حصتك.</p>';
+  window.JOBS=d.jobs;$('res').innerHTML=d.jobs.map((j,i)=>`<div class="card job"><b>${esc(j.title)}</b><span class="m">${[j.company,j.city,j.country].filter(Boolean).map(esc).join(' · ')}</span><br><a class="btn" style="margin-top:8px" target="_blank" rel="noopener" href="${esc(j.link)}">قدّم الآن</a> <button class="btn ol" style="margin-top:8px" data-cmp="${i}">قارن مع سيرتي</button></div>`).join('')||'<p class="m">مفيش نتايج، جرّب كلمة تانية. ومبتتخصمش من حصتك.</p>';
   $('me').textContent=`متبقي ${d.left} عملية بحث`}catch(e){$('res').innerHTML='';$('e3').textContent=e.message}
  b.disabled=false;b.textContent='ابحث'};
+
+const SW=('the and for with you are our will have has that this from your able all any can not but who their they job jobs work working year years experience required requirements skills responsibilities role position candidate team including must should strong good excellent ability knowledge also such other than more least plus etc new using use well within into per about looking company apply application need needs skilled handle ensure responsible provide من في على الى إلى عن مع او أو ان أن التي الذي هذا هذه ذلك كما لدى يجب يكون خبره خبرة سنوات سنه سنة مطلوب المطلوب شركه شركة وظيفه وظيفة العمل عمل لديه ذات حديثي التخرج المهام المسؤوليات الشروط').split(' ');
+const nm=t=>t.toLowerCase().replace(/[\u064B-\u065F\u0670\u0640]/g,'').replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه');
+const STOP=new Set(SW.map(nm));
+function toks(t){return (nm(t).match(/[a-z][a-z0-9+#.\-]+|[\u0621-\u064A]{3,}/g)||[]).map(w=>{if(/^[a-z]/.test(w)){w=w.replace(/[.\-]+$/,'');if(w.length>4&&w.endsWith('s'))w=w.slice(0,-1)}else if(w.length>4&&w.startsWith('ال'))w=w.slice(2);return w}).filter(w=>w.length>=3&&!STOP.has(w))}
+function compare(){const cv=$('cvt').value,jb=$('jbt').value,r=$('cmpres');
+ if(cv.trim().length<80||jb.trim().length<40){r.innerHTML='<p class="err">الصق نص السيرة (على الأقل سطرين) ونص الوظيفة.</p>';return}
+ const f={};toks(jb).forEach(w=>f[w]=(f[w]||0)+1);
+ const kws=Object.entries(f).sort((a,b)=>b[1]-a[1]).slice(0,25).map(x=>x[0]);
+ if(kws.length<5){r.innerHTML='<p class="err">نص الوظيفة قصير، الصق الوصف كامل.</p>';return}
+ const have=new Set(toks(cv)),ok=kws.filter(w=>have.has(w)),no=kws.filter(w=>!have.has(w)),sc=Math.round(ok.length/kws.length*100);
+ const lb=sc>=75?'توافق قوي':sc>=50?'توافق متوسط':'توافق ضعيف';
+ const chips=(a,c)=>a.length?`<div class="kw ${c}">${a.map(w=>'<span>'+esc(w)+'</span>').join('')}</div>`:'<p class="m">—</p>';
+ r.innerHTML=`<div class="card"><div class="sc">${sc}%</div><b>${lb}</b><div class="pg"><i style="width:${sc}%"></i></div>
+ <h3>كلمات موجودة في سيرتك (${ok.length})</h3>${chips(ok,'ok')}<h3 style="margin-top:14px">كلمات الوظيفة الناقصة (${no.length})</h3>${chips(no,'no')}
+ <p class="m" style="margin-top:14px">النسبة تقدير مبني على تطابق كلمات الوظيفة الأساسية مع سيرتك، وهي مش بديل عن مراجعة بشرية. ضيف الكلمات الناقصة اللي تناسب خبرتك فعلاً، وما تكتبش حاجة مش موجودة عندك.</p>
+ ${sc<75?'<p style="margin:14px 0 0"><button class="btn" id="cmpcta">اطلب سيرة ATS احترافية ضمن المسار الكامل</button></p>':''}</div>`;
+ const c=$('cmpcta');if(c)c.onclick=()=>{plan='full';drawPlans();location.hash='plans'}}
+$('cmpgo').onclick=compare;
+try{$('cvt').value=sessionStorage.getItem('wg_cv')||''}catch(e){}
+$('cvt').addEventListener('input',()=>{try{sessionStorage.setItem('wg_cv',$('cvt').value)}catch(e){}});
+$('res').addEventListener('click',e=>{const b=e.target.closest('[data-cmp]');if(!b)return;const j=(window.JOBS||[])[b.dataset.cmp];if(!j)return;
+ $('jbt').value=(j.title||'')+'\\n'+(j.description||'');$('cmpres').innerHTML='<p class="m">'+($('cvt').value.trim()?'اضغط حلّل التوافق.':'الصق سيرتك في الخانة اللي فوق، وبعدها اضغط حلّل التوافق.')+'</p>';location.hash='compare'});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 </body></html>
