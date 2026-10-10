@@ -116,6 +116,7 @@ footer{background:var(--ink);color:#B7C3DB;padding:52px 0 28px;margin-top:80px;f
 .fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}.fg h4{margin:0 0 10px;color:#fff;font-size:15px}.fg a{display:block;text-decoration:none;padding:3px 0}.fg a:hover{color:#fff}
 .fg .logo{color:#fff;margin-bottom:10px}.fg .logo i{color:#AAB4F0}.cr{margin-top:34px;padding-top:20px;border-top:1px solid #243452;font-size:13px}
 .bar{display:none}
+.rel{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 0}.rel a{display:block;border:1px solid var(--ln);border-radius:var(--r2);padding:16px 18px;text-decoration:none;background:#fff}.rel a:hover{border-color:var(--ac)}.rel b{display:block}.rel span{font-size:14px;color:var(--ink2)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media(max-width:860px){
 section{padding:56px 0}.nv{display:none}.hero{padding:36px 0 60px}.hg,.of,.cp,.fg,.fs{grid-template-columns:1fr;gap:32px}
@@ -132,7 +133,7 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="lg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#2b3a8f"/><path d="M16 44l12-12 8 8 14-16" stroke="#f28c28" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 24h10v10" stroke="#f28c28" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
 <header><div class="w"><nav>
 <a class="logo" href="/" aria-label="وظيفتك الجاية"><svg><use href="#lg"/></svg><span>وظيفتك <i>الجاية</i></span></a>
-<div class="nv"><a href="#how">الخطوات</a><a href="#plans">الباقات</a><a href="#compare">قارن سيرتك</a><a href="#about">من نحن</a><a href="#faq">الأسئلة</a></div>
+<div class="nv"><a href="#how">الخطوات</a><a href="#plans">الباقات</a><a href="#compare">قارن سيرتك</a><a href="#guides">الأدلة</a><a href="#about">من نحن</a><a href="#faq">الأسئلة</a></div>
 <a class="btn" href="#order">اطلب الخدمة</a></nav></div></header>
 <main>
 <section class="hero"><div class="w hg">
@@ -232,6 +233,9 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 <div class="card n"><h3>اللي مش بنقدمه</h3><ul><li>ضمان وظيفة أو مقابلة</li><li>التقديم بدالك على الوظايف</li><li>تجديد تلقائي من غير موافقتك</li></ul></div></div>
 </div></section>
 
+<section id="guides" style="background:var(--sf);border-block:1px solid var(--ln)"><div class="w"><h2>أدلة تساعدك قبل ما تقدّم</h2><p class="sub">معلومات عملية عن كتابة السيرة والتحقق من الإعلانات.</p>
+<div class="rel"><a href="/ats-cv-guide/"><b>كيف تكتب سيرة متوافقة مع ATS</b><span>التنسيق والكلمات المفتاحية وأخطاء شائعة</span></a><a href="/cv-ats-checker/"><b>فحص السيرة ATS مجاناً</b><span>قارن سيرتك بإعلان الوظيفة</span></a><a href="/job-scam-signs/"><b>علامات إعلانات النصب</b><span>اتأكد من الشركة قبل ما تبعت بياناتك</span></a></div></div></section>
+
 <section id="faq"><div class="w"><h2>أسئلة شائعة</h2><div style="margin-top:26px;max-width:760px">
 <details><summary>الوظايف حقيقية؟</summary><p>أيوه، بتتجمع من مواقع التوظيف وقت البحث، وكل وظيفة ليها رابط التقديم الأصلي.</p></details>
 <details><summary>إزاي أدفع؟</summary><p>بالتحويل على فودافون كاش أو إنستاباي على الرقم 01068204700، وبعدها تبعت الإيصال على واتساب وتستلم كود الدخول.</p></details>
@@ -245,7 +249,7 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 </main>
 <footer><div class="w"><div class="fg">
 <div><a class="logo" href="/"><svg><use href="#lg"/></svg><span>وظيفتك <i>الجاية</i></span></a><p style="margin:0;max-width:340px">منصة بحث عن وظائف في مصر والخليج، من فريق <a href="https://cvproservice.github.io/cvpro/" style="display:inline;text-decoration:underline">CV Pro Egypt</a>.</p></div>
-<div><h4>الموقع</h4><a href="#how">الخطوات</a><a href="#plans">الباقات</a><a href="#about">من نحن</a><a href="#faq">الأسئلة الشائعة</a></div>
+<div><h4>الموقع</h4><a href="#how">الخطوات</a><a href="#plans">الباقات</a><a href="#about">من نحن</a><a href="#faq">الأسئلة الشائعة</a><a href="/ats-cv-guide/">دليل سيرة ATS</a><a href="/cv-ats-checker/">فحص السيرة ATS</a><a href="/job-scam-signs/">علامات النصب</a></div>
 <div><h4>تواصل</h4><a href="https://wa.me/201068204700" dir="ltr" style="text-align:right">واتساب: 01068204700</a><a href="https://cvproservice.github.io/cvpro/">محتاج سيرة ذاتية احترافية؟</a></div>
 </div><div class="cr">© وظيفتك الجاية — جميع الحقوق محفوظة</div></div></footer>
 <div class="bar"><a class="btn lg wide" href="#order">اطلب الخدمة الآن</a></div>
